@@ -350,12 +350,399 @@
                 </div>
                 
                 <div class="approach-card">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Vaca Ysita - Terapeuta Holística</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap');
+        
+        :root {
+            --primary: #9D7AD9;
+            --secondary: #F4C7AB;
+            --dark: #2A2D34;
+            --light: #F8F5F2;
+            --accent: #E6B89C;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, rgba(157, 122, 217, 0.9) 0%, rgba(244, 199, 171, 0.9) 100%);
+            color: white;
+            padding: 80px 0 120px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            opacity: 0.2;
+            z-index: -1;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease;
+        }
+        
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .mission-section {
+            background-color: white;
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+            padding: 100px 0;
+            margin-top: -50px;
+        }
+        
+        .mission-content {
+            background: rgba(255,255,255,0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            backdrop-filter: blur(5px);
+            transform: translateY(0);
+            transition: transform 0.5s ease;
+        }
+        
+        .mission-content:hover {
+            transform: translateY(-10px);
+        }
+        
+        .approach-section {
+            background: linear-gradient(135deg, rgba(157, 122, 217, 0.05) 0%, rgba(244, 199, 171, 0.05) 100%);
+        }
+        
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .approach-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .approach-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .approach-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .approach-card h3 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .approach-card h3::before {
+            content: "✦";
+            margin-right: 10px;
+            color: var(--primary);
+        }
+        
+        .contact-section {
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+            padding: 120px 0 80px;
+        }
+        
+        .contact-info {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .quote {
+            font-style: italic;
+            font-size: 1.3rem;
+            margin: 40px auto;
+            max-width: 800px;
+            position: relative;
+            padding: 0 40px;
+        }
+        
+        .quote::before, .quote::after {
+            content: '"';
+            font-size: 3rem;
+            color: var(--accent);
+            position: absolute;
+            opacity: 0.5;
+        }
+        
+        .quote::before {
+            top: -20px;
+            left: 0;
+        }
+        
+        .quote::after {
+            bottom: -40px;
+            right: 0;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+        
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInDown {
+            from { 
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .mission-section {
+                clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 98%);
+                padding: 80px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="https://i.imgur.com/GAmVqEW.jpeg" alt="Aura Vaca Ysita" class="profile-img">
+            <h1>Aura Vaca Ysita</h1>
+            <p class="tagline">Terapeuta Holística · Terapeuta Espiritual  · Mujer Medicina · Canalizadora</p>
+        </div>
+    </header>
+    
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-content">
+                <h2>Mi Misión</h2>
+                <p>Ayudar al ser humano a habitarse con amor, a entender el porqué de cada situación que se presenta en su vida, permitiéndole así identificar patrones de pensamientos que generan emociones negativas en su vida.</p>
+                
+                <p>Al unir mis talentos y habilidades puedo comprender los principios fundamentales de nuestra existencia y al mundo que nos rodea. Invito al ser humano a entrar en una reflexión profunda y que en el silencio pueda conectar con la fuente creadora.</p>
+                
+                <div class="quote">
+                    Que cada ser reconozca al maestro en su propio latido. Que a través de la meditación y la respiración es posible mejorar su salud. Al conectar con la profundidad de su ser, va a poder ver cosas maravillosas que siempre han estado allí pero no lo sabía.
+                </div>
+                
+                <p>Le invito a abrazar su realidad de infinitas posibilidades, que las circunstancias no definen su realidad. Que el verdadero descubrimiento no es salir a buscar nuevas tierras sino a ver la vieja tierra con buenos ojos.</p>
+                
+                <p>Mediante mis terapias en conexión con las energías angelicales, códigos sagrados, aromaterapia y sonidos sanadores, las personas pueden recibir mensajes del universo. Que recuerde el ser humano quien es, de donde viene, y hacia dónde va.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="approach-section">
+        <div class="container">
+            <h2>Mi Enfoque Terapéutico</h2>
+            <p>Mi objetivo es que el ser humano se haga consciente de sus propios pensamientos, que entienda que su propio estado de quietud interior es la herramienta más poderosa, que descubra quien es y encuentre su propio camino.</p>
+            
+            <div class="approach-grid">
+                <div class="approach-card">
+                    <h3>Mentoría Angelical</h3>
+                    <p>Conexión con energías angelicales para recibir guía y mensajes del universo a través de códigos sagrados y sonidos sanadores.</p>
+                </div>
+                
+                <div class="approach-card">
+                    <h3>Toma de Conciencia</h3>
+                    <p>Identificación de patrones de pensamiento que generan emociones negativas para transformarlos desde la raíz.</p>
+                </div>
+                
+                <div class="approach-card">
+                    <h3>Conexión con tu Arcángel</h3>
+                    <p>Enseñanza para establecer una relación personal con tu arcángel guía y recibir su apoyo constante.</p>
+                </div>
+                
+                <div class="approach-card">
+                    <h3>Códigos Sagrados</h3>
+                    <p>Uso de símbolos y energías sagradas para activar procesos de sanación y transformación profunda.</p>
+                </div>
+                
+                <div class="approach-card">
+                    <h3>Celebra tu Vida</h3>
+                    <p>Reconexión con tu historia desde el momento de concepción para honrar tu camino único.</p>
+                </div>
+                
+                <div class="approach-card">
+                    <h3>Conócete a ti mismo</h3>
+                    <p>Exploración profunda para abrazar tu humanidad y reconocer tu esencia divina.</p>
+                </div>
+                
+                <div class="approach-card">
+                    <h3>Expresión Creativa</h3>
+                    <p>Liberación de todo lo bueno que llevas dentro mediante diferentes formas de expresión.</p>
+                </div>
+                
+                <div class="approach-card">
                     <h3>Valores Guía</h3>
                     <p>Identificación de tus valores esenciales para que sean la brújula de tu vida.</p>
                 </div>
             </div>
         </div>
     </section>
+    
+    <section class="mission-section">
+    <div class="container">
+        <div class="mission-content">
+            <h2>Recuerda tu Maestría</h2>
+            <p>Vivimos en una crisis de autoridad externa, donde la gente ha olvidado escucharse. Mis <strong>TERAPIAS ANGELICALES</strong> y <strong>MÁSTER CLASS</strong> te ayudarán a rescatar tu historia.</p>
+
+            <p>Mi enfoque es la <strong>soberanía sagrada</strong>, usando como herramientas el <strong>SILENCIO</strong>, rituales y meditaciones guiadas, <strong>PARA QUE ENCUENTRES TU MAESTRÍA INTERNA</strong> sin intermediarios. Que te des cuenta de que no necesitas al guía, que conectes con tu sabiduría innata.</p>
+
+            <p>Te acompaño a crear tu propio proyecto donde tu sabiduría emerja por sí misma.</p>
+
+            <div class="quote">
+                SERÉ EL SILENCIO QUE ACOGE TUS PREGUNTAS, EL ESPEJO QUE DEVUELVE TU PROPIA SABIDURÍA Y LA LÁMPARA QUE RECUERDA TU FUEGO INTERNO CUANDO EL CAMINO SE NUBLA. QUE TU MISIÓN SE SOSTENGA SOLA PORQUE TÚ ERES LA TIERRA FÉRTIL.
+            </div>
+
+            <h3>¿Cómo realizo mi acompañamiento?</h3>
+            <ul style="margin-top: 20px; line-height: 1.8; font-size: 1.1rem; padding-left: 20px;">
+                <li>1. Mentoría Angelical</li>
+                <li>2. Toma de Conciencia</li>
+                <li>3. Cómo conectar con tu Arcángel</li>
+                <li>4. Códigos Sagrados</li>
+                <li>5. Celebra tu Vida desde tu Concepción</li>
+                <li>6. Conócete a ti mismo, abraza tu humanidad</li>
+                <li>7. Expresa todo lo bueno que llevas dentro</li>
+                <li>8. Deja que tus valores guíen tu vida</li>
+                <li>9. Máster Class: cómo realizar tu Cumpleaños Holístico</li>
+                <li>10. Los 7 Arcángeles</li>
+                <li>11. Inspira a los demás con tu propia vida en compañía de los Arcángeles</li>
+                <li>12. Acepta tu cambio con amor y humildad, confiando en la divinidad</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
     
     <section class="contact-section">
         <div class="container">
@@ -377,6 +764,30 @@
     
     <script>
         // Animación para las tarjetas de enfoque
+        document.addEventListener('DOMContentLoaded', function() {
+            const approachCards = document.querySelectorAll('.approach-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            approachCards.forEach(card => {
+                observer.observe(card);
+                
+                // Retraso escalonado para la animación
+                const index = Array.from(approachCards).indexOf(card);
+                card.style.transitionDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html> tarjetas de enfoque
         document.addEventListener('DOMContentLoaded', function() {
             const approachCards = document.querySelectorAll('.approach-card');
             
